@@ -1,3 +1,3 @@
 # Diagrams
 
-![Screenshot](vuexflow.jpg)
+![Screenshot](vuexflow.png)
