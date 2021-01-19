@@ -7,10 +7,10 @@
 - Vuetify
 
 
-![Screenshot](gitimages/vuex.jpg)
-![Screenshot](gitimages/strapi.jpg)
-![Screenshot](gitimages/mysql.jpg)
-![Screenshot](gitimages/jest.jpg)
-![Screenshot](gitimages/vuetify.jpg)
+![Screenshot](gitimages/vuex.jpg)<br/>
+![Screenshot](gitimages/strapi.jpg)<br/>
+![Screenshot](gitimages/mysql.jpg)<br/>
+![Screenshot](gitimages/jest.jpg)<br/>
+![Screenshot](gitimages/vuetify.jpg)<br/>
 
 ![Screenshot](gitimages/atomicdesign.jpg)
