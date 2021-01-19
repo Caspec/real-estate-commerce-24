@@ -1,6 +1,6 @@
 # Vuex application
 
-Real estate commerce 24 | Vue 3.0 - Vuex
+Real estate commerce 24 | Vue 2.0 - Vuex
 
 
 ## Project setup
