@@ -7,6 +7,7 @@
 - Cypress end2end testing
 - Vuetify
 
+<br/>
 
 ![Screenshot](gitimages/vuex.jpg)<br/>
 ![Screenshot](gitimages/strapi.jpg)<br/>
