@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <Navbar></Navbar>
-    <v-main>asdasdasd
-      asd
-      asdasdasdasdasdasd </v-main>
+    <v-main> 
+      <router-view />
+    </v-main>
     <Footer></Footer>
   </v-app>
 </template>
@@ -14,16 +14,15 @@ import Footer from "./components/Footer";
 
 export default {
   name: "App",
-
   components: {
     Navbar,
     Footer
   },
+  data() {
 
-  data: () => ({
-    //
-  }),
+  },
 };
 </script>
 <style>
+@import './css/style.css';
 </style>

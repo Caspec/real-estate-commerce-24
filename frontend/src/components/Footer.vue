@@ -1,5 +1,6 @@
 <template>
   <v-footer color="grey lighten-3" padless>
+    <v-container>
     <v-row no-gutters>
       <v-col text class="my-2 pl-4" 
         ><span class="font-weight-medium">Find real estate agent</span> 
@@ -25,15 +26,22 @@
         <v-row no-gutters><v-col>Job at REC24</v-col></v-row>
         <v-row no-gutters><v-col>Become a franchisee</v-col></v-row>
       </v-col>
-      <v-col class="grey lighten-2 py-4 text-center black--text" cols="12">
+      
+    </v-row>
+    </v-container>
+    <v-container fluid>
+      <v-row>
+        <v-col class="grey lighten-2 py-4 text-center black--text" cols="12">
         {{ new Date().getFullYear() }} — <strong>Real Estate Commerce 24</strong>
       </v-col>
-    </v-row>
+      </v-row>
+    </v-container>
   </v-footer>
 </template>
 
 <script>
 export default {
+  name: "Footer",
   data() {
 
   },
