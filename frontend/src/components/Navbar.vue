@@ -34,11 +34,18 @@
           v-model="group"
           active-class="deep-red--text text--accent-4"
         >
-          <v-list-item v-for="item in menu" :to="item.route" :key="item.title">
+          <v-list-item two-line v-for="item in menu" :to="item.route" :key="item.title">
+            <v-list-item-content>
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <div v-if="item.submenu">
+            <v-list-item-subtitle v-for="sub in item.submenu" :key="sub.title">
+              <v-icon>{{ sub.icon }}</v-icon> {{ sub.title}}
+            </v-list-item-subtitle>
+            </div>
+        </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -57,12 +64,51 @@ export default {
         { icon: "mdi-home", title: "Home", route: "/" },
         { icon: "mdi-home-search", title: "Search residential", route: "2" },
         { icon: "mdi-account-search", title: "Find real estate agent", route: "2" },
-        { icon: "mdi-home-plus", title: "Buy residential", route: "2" },
-        { icon: "mdi-home-minus", title: "Sell residential", route: "2" },
+        { 
+          icon: "mdi-home-plus", 
+          title: "Buy residential", 
+          route: "2",
+          submenu: [
+            { icon: "mdi-account-multiple", title: "Parent buy", route: "2" },
+            { icon: "mdi-home-outline", title: "Summer residential", route: "2" },
+            { icon: "mdi-folder-home", title: "Buyer catalogue", route: "2" },
+            { icon: "mdi-layers-triple", title: "Buyer advice", route: "2" }
+          ]
+        },
+        { 
+          icon: "mdi-home-minus", 
+          title: "Sell residential", 
+          route: "2",
+          submenu: [
+            { icon: "mdi-information", title: "Why choose REC24?", route: "2" },
+            { icon: "mdi-home-city", title: "Sale of residential projects", route: "2" },
+            { icon: "mdi-home-outline", title: "Sale of summer residential", route: "2" },
+            { icon: "mdi-lightbulb-on", title: "99 free sales tips", route: "2" }
+          ] 
+        },
         { icon: "mdi-home-group", title: "Projectsales & rentals", route: "2" },
-        { icon: "mdi-cash-multiple", title: "Condos", route: "2" },
+        { 
+          icon: "mdi-cash-multiple", 
+          title: "Condos", 
+          route: "2",
+          submenu: [
+            { icon: "mdi-information", title: "What is a Condo?", route: "2" },
+            { icon: "mdi-home-city", title: "Your local real estate office", route: "2" },
+            { icon: "mdi-home-outline", title: "Sell of condos", route: "2" },
+            { icon: "mdi-account-tie", title: "Tailor-made sales", route: "2" }
+          ]
+        },
         { icon: "mdi-new-box", title: "News about the market", route: "2" },
-        { icon: "mdi-information", title: "About REC24", route: "About" },
+        { 
+          icon: "mdi-information", 
+          title: "About REC24", 
+          route: "About",
+           submenu: [
+            { icon: "mdi-newspaper-variant", title: "Brochures", route: "2" },
+            { icon: "mdi-briefcase", title: "Job", route: "2" },
+            { icon: "mdi-shield-lock", title: "Privacy policy", route: "2" }
+          ] 
+        },
         { icon: "mdi-home-modern", title: "Homes for rent", route: "2" },
         { icon: "mdi-login", title: "Login REC24", route: "2" },
         { icon: "mdi-account-group", title: "Book free sales assessment", route: "2" },
