@@ -42,7 +42,7 @@
             <v-list-item-title>{{ item.title }}</v-list-item-title>
             <div v-if="item.submenu">
             <v-list-item-subtitle v-for="sub in item.submenu" :key="sub.title">
-              <v-icon>{{ sub.icon }}</v-icon> {{ sub.title}}
+              {{ sub.title}}
             </v-list-item-subtitle>
             </div>
         </v-list-item-content>

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    Home component landing page
+    
   </div>
 </template>
 
