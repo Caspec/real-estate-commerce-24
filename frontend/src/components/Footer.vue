@@ -3,25 +3,25 @@
     <v-container>
     <v-row no-gutters justify="center">
       <v-col class="my-2 pl-2 ml-4 footer_column" cols="8" md="2">
-        <span class="font-weight-medium footer_title">Find real estate agent</span> 
+        <h4 class="font-weight-medium footer_title">Find real estate agent</h4> 
         <v-row no-gutters><v-col>Agent1</v-col></v-row>
         <v-row no-gutters><v-col>Agent2</v-col></v-row>
         <v-row no-gutters><v-col>Agent3</v-col></v-row>
       </v-col>
       <v-col class="my-2 pl-2 ml-4 footer_column" cols="8" md="2">
-        <span class="font-weight-medium footer_title">Buy and sell residential</span>
+        <h4 class="font-weight-medium footer_title">Buy and sell residential</h4>
         <v-row no-gutters><v-col>Project sales & rentals</v-col></v-row>
         <v-row no-gutters><v-col>REC24 buyer advice</v-col></v-row>
         <v-row no-gutters><v-col>Parental purchase</v-col></v-row>
       </v-col>
       <v-col class="my-2 pl-2 ml-4 footer_column" cols="8" md="2">
-        <span class="font-weight-medium footer_title">About the residential market</span>
+        <h4 class="font-weight-medium footer_title">About the residential market</h4>
         <v-row no-gutters><v-col>Residential news</v-col></v-row>
         <v-row no-gutters><v-col>Subscribe to newsletter</v-col></v-row>
         <v-row no-gutters><v-col>Press</v-col></v-row>
       </v-col>
       <v-col class="my-2 pl-2 ml-4 footer_column" cols="8" md="2">
-        <span class="font-weight-medium footer_title">About REC24</span>
+        <h4 class="font-weight-medium footer_title">About REC24</h4>
         <v-row no-gutters><v-col>About REC24</v-col></v-row>
         <v-row no-gutters><v-col>Job at REC24</v-col></v-row>
         <v-row no-gutters><v-col>Become a franchisee</v-col></v-row>

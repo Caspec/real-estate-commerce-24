@@ -6,7 +6,7 @@
           to="/"
           class="white--text logotext"
           title="Real Estate Commerce 24"
-          ><h2 :class="[$vuetify.breakpoint.mdAndUp ? 'display-desktop' : 'display-mobile']">Real Estate Commerce 24</h2></router-link>
+          ><h1 :class="[$vuetify.breakpoint.mdAndUp ? 'display-desktop' : 'display-mobile']">Real Estate Commerce 24</h1></router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-form>
