@@ -1,13 +1,14 @@
 <template>
   <div>
     <v-app-bar app color="red darken-4">
-      <v-toolbar-title class="white--text"><router-link
+      <v-toolbar-title class="white--text">
+          <router-link
           to="/"
           class="white--text logotext"
           title="Real Estate Commerce 24"
-          >Real Estate Commerce 24</router-link>
+          ><h2 :class="[$vuetify.breakpoint.mdAndUp ? 'display-desktop' : 'display-mobile']">Real Estate Commerce 24</h2></router-link>
       </v-toolbar-title>
-      <v-spacer class="hidden-xs-only"></v-spacer>
+      <v-spacer></v-spacer>
       <v-form>
         <v-autocomplete
           chips
@@ -18,7 +19,7 @@
           item-value="estate"
           label="Search for a real estate..."
           solo
-          class="light-red lighten-5 mr-3"
+          class="light-red lighten-5 mr-3 hidden-xs-only"
           color="red darken-4"
         >
         </v-autocomplete>
@@ -122,5 +123,14 @@ export default {
 .logotext {
   text-decoration: none;
   font-size: 1.4em;
+}
+
+.display-desktop {
+  font-size: 1.8rem;
+}
+
+.display-mobile {
+  font-size: 1.4rem;
+  margin-right: 40px;
 }
 </style>
