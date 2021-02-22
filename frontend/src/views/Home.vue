@@ -1,6 +1,52 @@
 <template>
   <div class="home">
-    
+    <v-container fluid class="ma-0 pa-0">
+      <v-row>
+        <v-col>
+          <v-img src="@/assets/girl-1920.jpg" alt="Buy your new dream" class="hero">
+            <v-row>
+              <v-col>
+                <div class="d-flex  flex-coldir-herooverlay">
+                  <div class="d-flex align-center justify-center">
+                    <v-card flat color="transparent">
+                      <v-card-text
+                        class="white--text font-weight-black"
+                      ><h2 class="hero__text">My real estate agent</h2>
+                      </v-card-text>
+                      <v-card-subtitle
+                        class="mt-5 sub"
+                      ><h2 class="hero__subtext">Be Home with a name you can trust.</h2>
+                      </v-card-subtitle>
+                    </v-card>
+                  </div>
+                </div>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col>
+                 <div class="d-flex fill-height flex-coldir-overlay">
+                  <div class="d-flex fill-height align-center justify-center">
+                    <v-card flat color="transparent">
+                      <v-card-text
+                        class="white--text font-weight-black"
+                      >bund bar whatever
+                      </v-card-text>
+                      <v-card-subtitle
+                        class="black--text"
+                      >bund bar whatever
+                      </v-card-subtitle>
+                    </v-card>
+                  </div>
+                </div>
+              </v-col>
+            </v-row>
+          </v-img>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>next row of things...</v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -9,6 +55,66 @@
 
 export default {
   name: "Home",
-  components: {},
 };
 </script>
+
+<style scoped>
+.hero {
+  height: 950px;
+}
+
+.flex-coldir-herooverlay {
+  flex-direction: column;
+  position: relative;
+  top: 520px;
+  font-size:10vw;
+}
+
+.flex-coldir-overlay {
+  flex-direction: column;
+  position: relative;
+  top: 700px;
+}
+
+.hero__text {
+  font-size: 7em;
+  text-align: center;
+}
+
+.hero__subtext {
+  font-size: 3em;
+  color: #EDEDED;
+  text-align: center;
+}
+
+.sub {
+  padding-left: 130px;
+}
+
+@media screen and (max-width: 768px) {
+.flex-coldir-herooverlay {
+  top: 120px;
+  right: 0px;
+}
+.flex-coldir-overlay {
+  top: 100px;
+}
+.hero {
+  height: auto;
+}
+.hero__text {
+  font-size:10vw;
+  color: #fff;
+}
+.hero__subtext {
+  font-size: 2em;
+  color: #EDEDED;
+}
+.sub {
+  padding-left: 10px;
+}
+.v-card__subtitle {
+  margin-top: 0px !important;
+}
+}
+</style>
