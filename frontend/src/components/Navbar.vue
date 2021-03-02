@@ -24,10 +24,15 @@
         >
         </v-autocomplete>
       </v-form>
+      <v-btn icon class="white--text ml-3" to="/about" title="My REC24">
+        <v-icon>mdi-account-outline</v-icon>
+      </v-btn>
       <v-app-bar-nav-icon
         class="white--text"
         @click="drawer = true"
-      ></v-app-bar-nav-icon>
+        title="Menu"
+      >
+     </v-app-bar-nav-icon>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute temporary right>
       <v-list nav dense>
@@ -103,7 +108,7 @@ export default {
         { 
           icon: "mdi-information", 
           title: "About REC24", 
-          route: "About",
+          route: "about",
            submenu: [
             { icon: "mdi-newspaper-variant", title: "Brochures", route: "2" },
             { icon: "mdi-briefcase", title: "Job", route: "2" },
@@ -131,6 +136,6 @@ export default {
 
 .display-mobile {
   font-size: 1.4rem;
-  margin-right: 40px;
+  margin-right: 50px;
 }
 </style>
