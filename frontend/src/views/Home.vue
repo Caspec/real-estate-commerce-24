@@ -38,7 +38,7 @@
                         <v-btn
                           x-large
                           color="success"
-                          class="overlay__btn"
+                          class="overlay__btn font-weight-bold"
                           to="/about"
                           title="Order free sales assessment"
                         >
@@ -54,38 +54,104 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container fluid>
+    <v-container fluid class="mb-8 mt-2">
       <v-row no-gutters justify="center">
-          <v-card
-            class="ml-4 my-2"
-            max-width="344"
-            v-for="item in info"
-            :key="item.header"
-            :to="item.link"
-            cols="8"
-            md="2"
-            
+        <v-card
+          class="ml-4 my-2"
+          max-width="344"
+          v-for="item in info"
+          :key="item.header"
+          :to="item.link"
+          :title="item.header"
+          cols="8"
+          md="2"
+        >
+          <v-col>
+            <v-card-actions>
+              <v-btn text color="blue lighten-1 accent-4" :to="item.link">
+                {{ item.link }}
+              </v-btn>
+            </v-card-actions>
+            <v-card-text>
+              <div class="pb-1">
+                <v-icon>{{ item.icon }}</v-icon>
+              </div>
+              <div>
+                <h3>{{ item.header }}</h3>
+              </div>
+              <div>
+                <p>{{ item.infotext }}</p>
+              </div>
+            </v-card-text>
+          </v-col>
+        </v-card>
+      </v-row>
+    </v-container>
+    <v-container fluid class="ml-0 mt-0 mb-0 mr-0 pa-0 lightbgoverlay">
+      <v-row no-gutters class="text-center">
+        <v-col>
+          <h2 class="headingcolor headingsale mt-2">Residents for sale</h2>
+        </v-col>
+      </v-row>
+      <v-row no-gutters>
+        <v-col cols="12" md="7">
+          <v-bottom-navigation
+            v-model="value"
+            class="v-bottom-navigation-new theme--light-bottom-navigation-new"
+            color="primary"
           >
-            <v-col>
-               <v-card-actions>
-                <v-btn text color="blue lighten-1 accent-4" :to="item.link">
-                  {{ item.link }}
-                </v-btn>
-              </v-card-actions>
-              <v-card-text>
-                <div class="pb-1">
-                  <v-icon>{{ item.icon }}</v-icon>
-                </div>
-                <div>
-                  <h3>{{ item.header }}</h3>
-                </div>
-                <div>
-                  <p>{{ item.infotext }}</p>
-                </div>
-              </v-card-text>
-            </v-col>
-          </v-card>
-        </v-row>
+            <v-btn value="all">
+              <span>All</span>
+              <v-icon>mdi-home</v-icon>
+            </v-btn>
+            <v-btn value="saved">
+              <span>Saved</span>
+              <v-icon>mdi-heart</v-icon>
+            </v-btn>
+            <v-btn value="latest">
+              <span>Latest Seen</span>
+              <v-icon>mdi-history</v-icon>
+            </v-btn>
+            <v-btn value="sort">
+              <span>Sort</span>
+              <v-icon>mdi-sort</v-icon>
+            </v-btn>
+          </v-bottom-navigation>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-container fluid class="lightbgoverlay pb-8">
+      <v-row no-gutters justify="center">
+        <v-card
+          class="ml-4 my-2"
+          max-width="344"
+          v-for="item in info"
+          :key="item.header"
+          :to="item.link"
+          :title="item.header"
+          cols="8"
+          md="2"
+        >
+          <v-col>
+            <v-card-actions>
+              <v-btn text color="blue lighten-1 accent-4" :to="item.link">
+                {{ item.link }}
+              </v-btn>
+            </v-card-actions>
+            <v-card-text>
+              <div class="pb-1">
+                <v-icon>{{ item.icon }}</v-icon>
+              </div>
+              <div>
+                <h3>{{ item.header }}</h3>
+              </div>
+              <div>
+                <p>{{ item.infotext }}</p>
+              </div>
+            </v-card-text>
+          </v-col>
+        </v-card>
+      </v-row>
     </v-container>
   </div>
 </template>
@@ -97,6 +163,7 @@ export default {
   name: "Home",
   data() {
     return {
+      value: "",
       info: [
         {
           icon: "mdi-layers-triple",
@@ -200,5 +267,4 @@ export default {
     margin-top: 0px !important;
   }
 }
-
 </style>

@@ -17,7 +17,7 @@
           hide-selected
           item-text="name"
           item-value="estate"
-          label="Search for a real estate..."
+          label="Quick search for a real estate"
           solo
           class="light-red lighten-5 mr-3 hidden-xs-only"
           color="red darken-4"
