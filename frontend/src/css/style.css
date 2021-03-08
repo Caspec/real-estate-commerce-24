@@ -9,3 +9,7 @@
 .grow-none {
     flex-grow: 0 !important;
 }
+
+.v-card--link:hover{
+    background-color:#e0e0e0 !important;
+  }
